@@ -83,10 +83,10 @@
         var swiper = new Swiper('.swiper-container', {
           slidesPerView: 1,
           spaceBetween: 30,
-          autoplay:false,
-          
+          autoplay:true,
+          effect: 'fade',
        loop: true,
-      //  freeMode: true,
+       freeMode: true,
           keyboard: {
             enabled: true,
           },
@@ -112,13 +112,7 @@
           });
       });
       </script>
-      <!-- <script>
-          $(document).ready(function(){
-              $('.swiper-button-prev,.swiper-button-next').click(function(){
-                 $('.swiper-wrapper').addClass("active");
-              });
-          });
-      </script> -->
+      
 </body>
 </html>
 

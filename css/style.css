@@ -18,8 +18,6 @@ html, body {
     text-align: center;
     font-size: 18px;
     background: #fff;
-
-    /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -50,11 +48,11 @@ html, body {
       color:white;
   }
   .contents p{
-      font-size: 24px;
+      font-size: 36px;
       font-family: sans-serif;
   }
   .contents h2{
-    font-size: 46px;
+    font-size: 72px;
   }
   .contents a{
     font-size: 13px;
@@ -76,28 +74,31 @@ html, body {
  .swiper-pagination-bullet{
      background-color:yellow !important;
  }
- .active .contents .a{
-     margin-top: 20px;
+ 
+ .swiper-slide-active > .contents > .professional{
+  animation-name: professional;
+  animation-duration: 2s;
+  animation-delay: 0.3s;
  }
- .active .contents .professional{
-     animation-name: professional;
-     animation-duration: 2s;
-     animation-delay: 0.3s;
- }
- .active .contents .interior-design{
+ .swiper-slide-active > .contents > .interior-design{
   animation-name: interior-design;
   animation-duration: 3s;
   animation-delay: 0.3s;
-}
-.active .contents .contact{
+ }
+ .swiper-slide-active > .contents > .contact{
   animation-name: contact-us;
   animation-duration: 3s;
   animation-delay: 0.3s;
-}
+ }
+ .contents .a{
+     margin-top: 20px;
+     display: inline-block;
+ }
+ 
  @keyframes professional{
      from{
          transform: translateY(-50px);
-         opacity: 0.3;
+         opacity: 0.3 ;
      }
      to{
          transform: translateY(0px);
@@ -124,6 +125,14 @@ html, body {
       opacity: 1;
   }
 }
+@media screen and (max-width: 480px){
+  .contents h2{
+    font-size: 46px;
+  }
+  .contents p{
+    font-size: 24px;
+}
+}
   @media screen and (max-width: 480px){
     .contents p{
         font-size: 20px;
@@ -134,10 +143,5 @@ html, body {
       .contents a{
         font-size: 10px;
       }
-      /* .swiper-button-next{
-          display: none !important;
-      }
-      .swiper-button-prev{
-        display: none !important;
-    } */
+    
   }
