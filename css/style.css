@@ -1,0 +1,143 @@
+html, body {
+    position: relative;
+    height: 100%;
+  }
+  body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+  }
+  .swiper-container {
+    width: 100%;
+    height: 100vh;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .background-image{
+      position: absolute;
+      height:100vh;
+      width:100%;
+  }
+  .background-image img{
+      height:100%;
+      width:100%;
+      background-repeat: no-repeat;
+      object-fit: cover;
+      object-position: center;
+  }
+  .contents{
+      position: absolute;
+      color:white;
+  }
+  .contents p{
+      font-size: 24px;
+      font-family: sans-serif;
+  }
+  .contents h2{
+    font-size: 46px;
+  }
+  .contents a{
+    font-size: 13px;
+    padding:20px 40px;
+    background-color: yellow;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.4s all linear;
+  }
+  .contents a:hover{
+      background-color: gray;
+  }
+  .swiper-button-next{
+    color:white !important;
+}
+.swiper-button-prev{
+    color:white !important;
+}
+ .swiper-pagination-bullet{
+     background-color:yellow !important;
+ }
+ .active .contents .a{
+     margin-top: 20px;
+ }
+ .active .contents .professional{
+     animation-name: professional;
+     animation-duration: 2s;
+     animation-delay: 0.3s;
+ }
+ .active .contents .interior-design{
+  animation-name: interior-design;
+  animation-duration: 3s;
+  animation-delay: 0.3s;
+}
+.active .contents .contact{
+  animation-name: contact-us;
+  animation-duration: 3s;
+  animation-delay: 0.3s;
+}
+ @keyframes professional{
+     from{
+         transform: translateY(-50px);
+         opacity: 0.3;
+     }
+     to{
+         transform: translateY(0px);
+         opacity: 1;
+     }
+ }
+ @keyframes interior-design{
+  from{
+      transform: translateY(-40px);
+      opacity: 0.3;
+  }
+  to{
+      transform: translateY(0px);
+      opacity: 1;
+  }
+}
+@keyframes contact-us{
+  from{
+      transform: translateY(40px);
+      opacity: 0.3;
+  }
+  to{
+      transform: translateY(0px);
+      opacity: 1;
+  }
+}
+  @media screen and (max-width: 480px){
+    .contents p{
+        font-size: 20px;
+    }
+    .contents h2{
+        font-size: 37px;
+      }
+      .contents a{
+        font-size: 10px;
+      }
+      /* .swiper-button-next{
+          display: none !important;
+      }
+      .swiper-button-prev{
+        display: none !important;
+    } */
+  }
